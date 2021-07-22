@@ -15,7 +15,7 @@ SECRET_KEY = 'django-insecure-y%i*u4r3y^gc_^8zt3p5m@mc0o58$u8_u_vgwaq6r$^5xj@oe-
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['142.93.236.70', 'actionotreaction.com']
+ALLOWED_HOSTS = ['actionotreaction.com', '142.93.236.70']
 
 
 # Application definition
@@ -87,7 +87,7 @@ if DEBUG:
 else:
     DATABASES = {
         'default': {
-            'ENGINE': 'django.db.backends.postgresql',
+            'ENGINE': 'django.db.backends.postgresql_psycopg2',
             'NAME': 'action_not_reaction',
             'USER': 'eduardo_vilacha',
             'PASSWORD': 'eduardo_vilacha',
