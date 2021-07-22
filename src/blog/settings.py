@@ -90,7 +90,7 @@ else:
             'ENGINE': 'django.db.backends.postgresql_psycopg2',
             'NAME': 'action_not_reaction',
             'USER': 'eduardo_vilacha',
-            'PASSWORD': 'ANR_2027_@_ev',
+            'PASSWORD': 'eduardo_vilacha',
             'HOST': 'localhost',
             'PORT': '',
         }
