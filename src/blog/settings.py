@@ -88,7 +88,7 @@ else:
     DATABASES = {
         'default': {
             'ENGINE': 'django.db.backends.postgresql_psycopg2',
-            'NAME': 'action_not_reaction',
+            'NAME': 'actionotreaction',
             'USER': 'eduardo_vilacha',
             'PASSWORD': 'eduardo_vilacha',
             'HOST': 'localhost',
