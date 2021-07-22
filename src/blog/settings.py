@@ -33,10 +33,11 @@ INSTALLED_APPS = [
     'allauth.account',
     'allauth.socialaccount',
 
-    'tinymce',
     'crispy_forms',
-    'posts',
+    'tinymce',
+
     'marketing',
+    'posts',
 ]
 
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
@@ -136,8 +137,6 @@ MEDIA_URL = '/media/'
 STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static_in_env')]
 STATIC_ROOT = os.path.join(BASE_DIR, 'static_root')
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media_root')
-
-STATIC_URL = '/static/'
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
