@@ -13,7 +13,7 @@ SECRET_KEY = 'k*b$$!%hiswnhp2pad)6(u4x_g)r5w%@&zlv&@2hrz4#f31234'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['161.35.85.210']
+ALLOWED_HOSTS = ['www.actionotreaction.com', 'actionotreaction.com', '161.35.85.210']
 
 # Application definition
 
