@@ -92,10 +92,7 @@ def post(request, id):
         'most_recent': most_recent,
         'category_count': category_count,
     }
-    return redirect(reverse("post-detail", kwargs={
-        'id': post.id
-    }))
-    #return render(request, 'post.html', context)
+    return render(request, 'post.html', context)
 
 
 def post_create(request):
