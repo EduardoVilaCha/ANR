@@ -46,6 +46,7 @@ def index(request):
     context = {
         'object_list': featured,
         'latest': latest,
+        'form': form
     }
     return render(request, 'index.html', context)
 
