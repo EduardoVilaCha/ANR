@@ -6,7 +6,7 @@ from django.urls import path, include
 from posts.views import (
     index,
     blog,
-    post,
+    post_list,
     search,
     post_create,
     post_update,
