@@ -6,7 +6,7 @@ from django.urls import path, include
 from posts.views import (
     index,
     blog,
-    post_list,
+    post,
     search,
     post_create,
     post_update,
@@ -16,7 +16,7 @@ from posts.views import (
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', index),
-    path('blog/', post_list, name='post-list'),
+    path('blog/', post, name='post-list'),
     path('search/', search, name='search'),
     path('create/', post_create, name='post-create'),
     path('post/<id>/', post, name='post-detail'),
