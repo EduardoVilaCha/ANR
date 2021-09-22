@@ -48,10 +48,9 @@ def index(request):
     context = {
         "object_list": featured,
         "latest": latest,
-        "form": form
+        "form": form,
     }
     # fmt: on
-
     return render(request, "index.html", context)
 
 
@@ -78,7 +77,7 @@ def blog(request):
     return render(request, "blog.html", context)
 
 
-def post(request, slug, id):
+def post(request, id):
     category_count = get_category_count()
     most_recent = Post.objects.order_by("-timestamp")[:3]
     post = get_object_or_404(Post, id=id)
