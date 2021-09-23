@@ -41,9 +41,10 @@ class Post(models.Model):
     overview = models.TextField()
     timestamp = models.DateTimeField(auto_now_add=True)
     content = HTMLField()
-    slug = models.SlugField(
-        max_length=250, null=True, blank=True
-    )  # slug field !!!maybe change
+    slug = models.SlugField(max_length=250)
+    # max_length=250, null=True, blank=True
+    # slug field !!!maybe change
+
     # comment_count = models.IntegerField(default = 0)
     # view_count = models.IntegerField(default = 0)
     author = models.ForeignKey(Author, on_delete=models.CASCADE)
