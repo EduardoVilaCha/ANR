@@ -41,8 +41,7 @@ class Post(models.Model):
     overview = models.TextField()
     timestamp = models.DateTimeField(auto_now_add=True)
     content = HTMLField()
-    slug = models.SlugField(max_length=250)
-    # max_length=250, null=True, blank=True
+    slug = models.SlugField(max_length=250, null=True, blank=True)
     # slug field !!!maybe change
 
     # comment_count = models.IntegerField(default = 0)
