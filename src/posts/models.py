@@ -71,7 +71,7 @@ class Post(models.Model):
     def get_delete_url(self):
         return reverse("post-delete", kwargs={"id": self.id})
 
-    def save(self, *args, **kwargs):  # new
+    def save(self, *args, **kwargs):
         self.slug = slugify(self.title)
         super().save(*args, **kwargs)
 
