@@ -87,9 +87,7 @@ def post(request, slug, id):
             form.instance.user = request.user
             form.instance.post = post
             form.save()
-            return redirect(
-                reverse("post-detail", kwargs={"id": post.id, "slug": self.slug})
-            )
+            return redirect(reverse("post-detail", kwargs={"id": post.id}))
 
     context = {
         "form": form,
