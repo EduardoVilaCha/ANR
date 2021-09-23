@@ -41,7 +41,9 @@ class Post(models.Model):
     overview = models.TextField()
     timestamp = models.DateTimeField(auto_now_add=True)
     content = HTMLField()
-    slug = models.SlugField(max_length=250, null=True, blank=True)  # slug field
+    slug = models.SlugField(
+        max_length=250, null=True, blank=True
+    )  # slug field !!!maybe change
     # comment_count = models.IntegerField(default = 0)
     # view_count = models.IntegerField(default = 0)
     author = models.ForeignKey(Author, on_delete=models.CASCADE)
@@ -63,7 +65,9 @@ class Post(models.Model):
         return self.title
 
     def get_absolute_url(self):
-        return reverse("post-detail", kwargs={"id": self.id, "slug": self.slug})
+        return reverse(
+            "post-detail", kwargs={"id": self.id, "slug": self.slug}
+        )  # maybe change
 
     def get_update_url(self):
         return reverse("post-update", kwargs={"id": self.id})
