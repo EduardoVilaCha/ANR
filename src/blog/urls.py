@@ -11,7 +11,7 @@ urlpatterns = [
     path("blog/", blog, name="post-list"),
     path("search/", search, name="search"),
     path("create/", post_create, name="post-create"),
-    path("post/<slug>/<id>", post, name="post-detail"),
+    path("post/<slug:slug>/<id>", post, name="post-detail"),
     path("post/<id>/update/", post_update, name="post-update"),
     path("post/<id>/delete/", post_delete, name="post-delete"),
     path("tinymce/", include("tinymce.urls")),
