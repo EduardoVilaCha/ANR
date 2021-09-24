@@ -47,8 +47,7 @@ def index(request):
     # fmt: off
     context = {
         "object_list": featured,
-        "latest": latest,
-        "form": form
+        "latest": latest
     }
     # fmt: on
     return render(request, "index.html", context)
