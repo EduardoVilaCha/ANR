@@ -2,7 +2,7 @@
 # It contains the essential fields and behaviors of the data you’re storing.
 # Generally, each model maps to a single database table.
 
-from tinymce import HTMLField
+from tinymce.models import HTMLField
 from django.db import models
 from django.contrib.auth import get_user_model
 from django.urls import reverse
