@@ -39,9 +39,9 @@ class Comment(models.Model):
 
 class Post(models.Model):
     title = models.CharField(max_length=100)
-    overview = HTMLField()
+    overview = models.TextField(max_length=250)
     timestamp = models.DateTimeField(auto_now_add=True)
-    content = HTMLField("Content")
+    content = HTMLField()
     slug = models.SlugField(max_length=250, null=True, blank=True)
     # slug field !!!maybe change
 
