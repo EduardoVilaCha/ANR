@@ -11,7 +11,7 @@ urlpatterns = [
     path("blog/", blog, name="post-list"),
     path("search/", search, name="search"),
     path("create/", post_create, name="post-create"),
-    path("post/<slug:slug>/", post, name="post-detail"),  # maybe change
+    path("post/<slug:slug>/<int:id>", post, name="post-detail"),
     path("post/<id>/update/", post_update, name="post-update"),
     path("post/<id>/delete/", post_delete, name="post-delete"),
     path("tinymce/", include("tinymce.urls")),
@@ -21,5 +21,3 @@ urlpatterns = [
 if settings.DEBUG:
     urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
     urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
-# New database
-# New database
