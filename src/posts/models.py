@@ -2,7 +2,8 @@
 # It contains the essential fields and behaviors of the data you’re storing.
 # Generally, each model maps to a single database table.
 
-from tinymce.models import HTMLField
+# from tinymce.models import HTMLField
+from tinymce import HTMLField
 from django.db import models
 from django.contrib.auth import get_user_model
 from django.urls import reverse
@@ -38,9 +39,9 @@ class Comment(models.Model):
 
 class Post(models.Model):
     title = models.CharField(max_length=100)
-    overview = models.TextField()
+    overview = HTMLField()
     timestamp = models.DateTimeField(auto_now_add=True)
-    content = HTMLField()
+    content = HTMLField("Content")
     slug = models.SlugField(max_length=250, null=True, blank=True)
     # slug field !!!maybe change
 
@@ -65,9 +66,7 @@ class Post(models.Model):
         return self.title
 
     def get_absolute_url(self):
-        return reverse(
-            "post-detail", kwargs={"id": self.id, "slug": self.slug}
-        )  # maybe change
+        return reverse("post-detail", kwargs={"id": self.id, "slug": self.slug})
 
     def get_update_url(self):
         return reverse("post-update", kwargs={"id": self.id})
