@@ -8,7 +8,7 @@
 {{ form.media }}
 <form method="POST" action="." enctype="multipart/form-data">
     {% csrf_token %}
-    {{ form|safe }}
+    {{ form|crispy }}
     <button class="btn btn-primary" type="submit">Submit</button>
 </form>
 

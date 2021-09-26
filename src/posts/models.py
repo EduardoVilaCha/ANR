@@ -7,6 +7,7 @@ from tinymce.models import HTMLField
 from django.db import models
 from django.contrib.auth import get_user_model
 from django.urls import reverse
+from ckeditor.fields import RichTextField
 from django.utils.text import slugify
 
 User = get_user_model()
@@ -42,7 +43,7 @@ class Post(models.Model):
     overview = models.TextField(max_length=250)
     text = models.TextField(max_length=250, blank=True)
     timestamp = models.DateTimeField(auto_now_add=True)
-    content = HTMLField()
+    content = RichTextField(blank=True, null=True)
     slug = models.SlugField(max_length=250, null=True, blank=True)
     # slug field !!!maybe change
 
