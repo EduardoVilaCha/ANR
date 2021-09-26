@@ -47,7 +47,8 @@ def index(request):
     # fmt: off
     context = {
         "object_list": featured,
-        "latest": latest
+        "latest": latest,
+        "form": form
     }
     # fmt: on
     return render(request, "index.html", context)
@@ -107,7 +108,12 @@ def post_create(request):
         if form.is_valid():
             form.instance.author = author
             form.save()
-            return redirect(reverse("post-detail", kwargs={"id": form.instance.id}))
+            return redirect(
+                reverse(
+                    "post-detail",
+                    kwargs={"id": form.instance.id, "slug": form.instance.slug},
+                )
+            )
     context = {"title": title, "form": form}
     return render(request, "post_create.html", context)
 
@@ -121,7 +127,12 @@ def post_update(request, id):
         if form.is_valid():
             form.instance.author = author
             form.save()
-            return redirect(reverse("post-detail", kwargs={"id": form.instance.id}))
+            return redirect(
+                reverse(
+                    "post-detail",
+                    kwargs={"id": form.instance.id, "slug": form.instance.slug},
+                )
+            )
     context = {"title": title, "form": form}
     return render(request, "post_create.html", context)
 
