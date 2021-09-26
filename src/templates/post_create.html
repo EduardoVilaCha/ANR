@@ -1,14 +1,3 @@
-<script src="//tinymce.cachefly.net/4.1/tinymce.min.js"></script>
-<script>
-tinymce.init({selector:'textarea',
-    plugins: [
-        "advlist autolink lists link image charmap print preview hr anchor pagebreak",
-        "searchreplace wordcount visualblocks visualchars code fullscreen",
-        "insertdatetime media nonbreaking save table contextmenu directionality",
-        "emoticons template paste textcolor colorpicker textpattern"
-    ],
-});</script>
-
 {% extends 'base.html' %}
 {% load crispy_forms_tags %}
 
@@ -19,7 +8,7 @@ tinymce.init({selector:'textarea',
 {{ form.media }}
 <form method="POST" action="." enctype="multipart/form-data">
     {% csrf_token %}
-    {{ form|crispy }}
+    {{ form|safe }}
     <button class="btn btn-primary" type="submit">Submit</button>
 </form>
 
