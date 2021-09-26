@@ -44,13 +44,7 @@ def index(request):
         new_signup.email = email
         new_signup.save()
 
-    # fmt: off
-    context = {
-        "object_list": featured,
-        "latest": latest,
-        "form": form
-    }
-    # fmt: on
+    context = {"object_list": featured, "latest": latest}
     return render(request, "index.html", context)
 
 
