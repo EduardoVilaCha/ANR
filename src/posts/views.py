@@ -89,7 +89,7 @@ def post(request, slug, id):
             form.save()
             return redirect(
                 reverse("post-detail", kwargs={"id": post.id, "slug": post.slug})
-            )  # slug field !!!maybe add "slug": post.slug
+            )
 
     context = {
         "form": form,
