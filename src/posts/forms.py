@@ -1,5 +1,6 @@
 from django import forms
 from tinymce.widgets import TinyMCE
+from ckeditor.widgets import CKEditorWidget
 from .models import Post, Comment
 
 
@@ -21,6 +22,9 @@ class TinyMCEWidget(TinyMCE):
 
 
 class PostForm(forms.ModelForm):
+
+    content = forms.CharField(widget=CKEditorWidget())
+
     class Meta:
         model = Post
         fields = (
