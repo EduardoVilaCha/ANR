@@ -26,8 +26,8 @@
                   </div><a href="{{ post.get_absolute_url }}">
                     <h3 class="h4">{{ post.title }}</h3></a>
                   <p class="text-muted"> {{ post.overview }} </p>
-                  <footer class="post-footer d-flex justify-content-between">
-                    <a href="#" class="author d-flex align-items-center flex-wrap">
+                  <footer class="post-footer d-flex justify-content-around">
+                    <a href="#" class="author d-flex justify-content-around">
                       <div class="avatar"><img src="{{ post.author.profile_picture.url }}" alt="..." class="img-fluid"></div>
                       <div class="title"><span>{{ post.author.user.username }}</span></div>
                     </a>
