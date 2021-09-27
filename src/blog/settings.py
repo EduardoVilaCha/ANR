@@ -166,6 +166,14 @@ TINYMCE_DEFAULT_CONFIG = {
     "statusbar": True,
 }
 
+CKEDITOR_CONFIGS = {
+    "default": {
+        "toolbar": "full",
+        "height": 300,
+        "width": 300,
+    },
+}
+
 # Django allauth
 
 AUTHENTICATION_BACKENDS = (
