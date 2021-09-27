@@ -29,7 +29,7 @@
                   <footer class="post-footer d-flex align-self-stretch">
                     <a href="#" class="author d-flex justify-content-around">
                       <div class="avatar"><img src="{{ post.author.profile_picture.url }}" alt="..." class="img-fluid"></div>
-                      <div class="title">{{ post.author.user.username }}</div>
+                      <div class="title"><span>{{ post.author.user.username }}</span></div>
                     </a>
                     <div class="date"><i class="icon-clock"></i> {{ post.timestamp|timesince }} ago </div>
                     <div class="comments meta-last"><i class="icon-comment"></i>{{ post.comment_count }}</div>
