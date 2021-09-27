@@ -130,7 +130,19 @@ MEDIA_URL = "/media/"
 STATICFILES_DIRS = [os.path.join(BASE_DIR, "static_in_env")]
 STATIC_ROOT = os.path.join(BASE_DIR, "static")
 MEDIA_ROOT = os.path.join(BASE_DIR, "media")
+
+
+CKEDITOR_CONFIGS = {
+    "default": {
+        "toolbar": "full",
+        "height": 300,
+        "width": 300,
+    },
+}
+
 CKEDITOR_BASEPATH = "/static/ckeditor/ckeditor/"
+CKEDITOR_UPLOAD_PATH = "uploads/"
+CKEDITOR_FILENAME_GENERATOR = "utils.get_filename"
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
@@ -164,14 +176,6 @@ TINYMCE_DEFAULT_CONFIG = {
     "contextmenu": "formats | link image",
     "menubar": True,
     "statusbar": True,
-}
-
-CKEDITOR_CONFIGS = {
-    "default": {
-        "toolbar": "full",
-        "height": 300,
-        "width": 300,
-    },
 }
 
 # Django allauth
