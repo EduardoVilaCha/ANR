@@ -40,7 +40,7 @@ class Comment(models.Model):
 
 class Post(models.Model):
     title = models.CharField(max_length=100)
-    overview = models.TextField(max_length=250)
+    overview = models.TextField(max_length=2000)
     timestamp = models.DateTimeField(auto_now_add=True)
     content = RichTextField(blank=True, null=True)
     slug = models.SlugField(max_length=250, null=True, blank=True)
