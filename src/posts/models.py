@@ -86,3 +86,10 @@ class Post(models.Model):
     @property
     def comment_count(self):
         return Comment.objects.filter(post=self).count()
+
+    @property
+    def convert_in_meta(self):
+        title = (self.title)[0:50]
+        overview = (self.overview)[0:100]
+        description = title + str(overview)
+        return description

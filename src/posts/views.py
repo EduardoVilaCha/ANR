@@ -90,6 +90,7 @@ def post(request, slug, id):
         "post": post,
         "most_recent": most_recent,
         "category_count": category_count,
+        "post_meta": post_meta,
     }
     return render(request, "post.html", context)
 
