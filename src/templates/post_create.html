@@ -1,6 +1,10 @@
 {% extends 'base.html' %}
 {% load crispy_forms_tags %}
 
+{% block metadescription %}
+    <meta name="description" content="{{post.description|truncatechars:25}}">
+{% endblock %}
+
 {% block content %}
 
 <div class="col-4 offset-4 mb-5 mt-5">
