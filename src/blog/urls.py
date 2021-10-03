@@ -3,6 +3,10 @@ from django.conf.urls.static import static
 from django.contrib import admin
 from django.urls import path, include
 
+from rollyourown.seo.admin import register_seo_admin
+from django.contrib import admin
+from test_project.seo import MyMetadata
+
 from posts.views import index, blog, post, search, post_create, post_update, post_delete
 
 urlpatterns = [
@@ -21,3 +25,5 @@ urlpatterns = [
 if settings.DEBUG:
     urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
     urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+
+register_seo_admin(admin.site, MyMetadata)
