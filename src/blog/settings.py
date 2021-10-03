@@ -33,6 +33,7 @@ INSTALLED_APPS = [
     "ckeditor",
     "marketing",
     "posts",
+    "rollyourown.seo",
 ]
 
 CRISPY_TEMPLATE_PACK = "bootstrap4"
@@ -64,6 +65,8 @@ TEMPLATES = [
         },
     },
 ]
+
+TEMPLATE_CONTEXT_PROCESSORS = "django.core.context_processors.request"
 
 WSGI_APPLICATION = "blog.wsgi.application"
 
