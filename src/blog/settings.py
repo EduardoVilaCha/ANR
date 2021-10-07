@@ -33,7 +33,7 @@ INSTALLED_APPS = [
     "ckeditor",
     "marketing",
     "posts",
-    "snakeoil",
+    "meta",
 ]
 
 CRISPY_TEMPLATE_PACK = "bootstrap4"
