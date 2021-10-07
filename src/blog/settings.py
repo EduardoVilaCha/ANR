@@ -33,7 +33,7 @@ INSTALLED_APPS = [
     "ckeditor",
     "marketing",
     "posts",
-    "rollyourown.seo",
+    "djangoseo",
 ]
 
 CRISPY_TEMPLATE_PACK = "bootstrap4"
@@ -110,6 +110,9 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
+MIGRATION_MODULES = {
+    "djangoseo": "path.to.migrations",
+}
 
 # Internationalization
 # https://docs.djangoproject.com/en/3.2/topics/i18n/
