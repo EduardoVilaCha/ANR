@@ -33,6 +33,7 @@ INSTALLED_APPS = [
     "ckeditor",
     "marketing",
     "posts",
+    "snakeoil",
 ]
 
 CRISPY_TEMPLATE_PACK = "bootstrap4"
@@ -185,5 +186,16 @@ AUTHENTICATION_BACKENDS = (
     "django.contrib.auth.backends.ModelBackend",
     "allauth.account.auth_backends.AuthenticationBackend",
 )
+
+SNAKEOIL_DEFAULT_TAGS={
+    "default": [
+        {"name": "author", "content": "Tom Carrick"},
+        {"property": "og:actionnotreaction", "content": "My Website"},
+        {"property": "og:type", "content": "website"}
+    ]
+    "eo": [
+        {"property": "og:actionnotreaction", "content": "Mia Ratejo"},
+    ]
+}
 
 SITE_ID = 1
