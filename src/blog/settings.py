@@ -33,7 +33,7 @@ INSTALLED_APPS = [
     "ckeditor",
     "marketing",
     "posts",
-    "djangoseo",
+    "seo",
 ]
 
 CRISPY_TEMPLATE_PACK = "bootstrap4"
