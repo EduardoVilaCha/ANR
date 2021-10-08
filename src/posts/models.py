@@ -63,6 +63,12 @@ class Post(models.Model):
         "self", related_name="next", on_delete=models.SET_NULL, blank=True, null=True
     )
 
+    _metadata = {
+        "title": "name",
+        "description": "abstract",
+        "image": "get_meta_image",
+    }
+
     def __str__(self):
         return self.title
 
