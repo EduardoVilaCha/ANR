@@ -187,14 +187,4 @@ AUTHENTICATION_BACKENDS = (
     "allauth.account.auth_backends.AuthenticationBackend",
 )
 
-SNAKEOIL_DEFAULT_TAGS = {
-    "default": [
-        {
-            "name": "description",
-            "property": "og:description",
-            "content": "My meta description.",
-        }
-    ]
-}
-
 SITE_ID = 1
