@@ -4,12 +4,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width-device-width, initial-scale=1">
     <meta name="author" content="Action Not Reaction"
-
-    {% if request.path == "/" %}
-    <title>Action Not Reaction</title>
-    {% else %}
-    <title>{% with name=request.path|slice:"1:" %} {{name|title}} {% endwith %} </title>
-    {% endif %}
+    <title> Action Not Reaction </title>
 
     <meta name="description" content="From Research to Study Tips, in this space you will get a sense of every part of the path of an engineer. Curious to know more? See you on inside!">
 
