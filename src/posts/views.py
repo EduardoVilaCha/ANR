@@ -36,7 +36,7 @@ def get_category_count():
 
 def index(request):
     featured = Post.objects.filter(featured=True)
-    latest = Post.objects.order_by("timestamp")[0:3]
+    latest = Post.objects.order_by("-timestamp")[0:3]
 
     if request.method == "POST":
         email = request.POST["email"]
@@ -44,7 +44,7 @@ def index(request):
         new_signup.email = email
         new_signup.save()
 
-    context = {"object_list": featured, "latest": latest}
+    context = {"object_list": featured.order_by("-timestamp")[0:3], "latest": latest}
     return render(request, "index.html", context)
 
 
