@@ -410,7 +410,6 @@ CKEDITOR_CONFIGS = {
                 "autogrow",
                 # 'devtools',
                 "widget",
-                "images2",
                 "lineutils",
                 "clipboard",
                 "dialog",
