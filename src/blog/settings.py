@@ -408,6 +408,7 @@ CKEDITOR_CONFIGS = {
                 "autoembed",
                 "embedsemantic",
                 "autogrow",
+                "image2",
                 # 'devtools',
                 "widget",
                 "codesnippet",
