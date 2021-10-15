@@ -23,7 +23,7 @@ class TinyMCEWidget(TinyMCE):
 
 class PostForm(forms.ModelForm):
 
-    content = forms.CharField(widget=CKEditorWidget())
+    # content = forms.CharField(widget=CKEditorWidget())
 
     class Meta:
         model = Post
