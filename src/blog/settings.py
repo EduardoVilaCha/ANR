@@ -411,6 +411,7 @@ CKEDITOR_CONFIGS = {
                 # 'devtools',
                 "widget",
                 "codesnippet",
+                "mathjax",
                 "lineutils",
                 "clipboard",
                 "dialog",
