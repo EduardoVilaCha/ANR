@@ -9,6 +9,7 @@ from django.contrib.auth import get_user_model
 from django.urls import reverse
 from ckeditor.fields import RichTextField
 from django.utils.text import slugify
+from django_ckeditor_5.fields import CKEditor5Field
 
 User = get_user_model()
 
@@ -42,7 +43,8 @@ class Post(models.Model):
     title = models.CharField(max_length=100)
     overview = models.TextField(max_length=2000)
     timestamp = models.DateTimeField(auto_now_add=True)
-    content = RichTextField(blank=True, null=True)
+    content = CKEditor5Field("Text", config_name="extends")
+    # content = RichTextField(blank=True, null=True)
     slug = models.SlugField(max_length=250, null=True, blank=True)
     # slug field !!!maybe change
 
