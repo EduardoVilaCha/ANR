@@ -391,6 +391,10 @@ CKEDITOR_CONFIGS = {
             },
         ],
         "toolbar": "toolbar_YourCustomToolbarConfig",  # put selected toolbar config here
+        # Class used inside span to render mathematical formulae using latex
+        "mathJaxClass": "mathjax-latex",
+        # Mathjax library link to be used to render mathematical formulae
+        "mathJaxLib": "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_SVG",
         # 'toolbarGroups': [{ 'name': 'document', 'groups': [ 'mode', 'document', 'doctools' ] }],
         # 'height': 291,
         # 'width': '100%',
@@ -426,7 +430,7 @@ CKEDITOR_BASEPATH = "/static/ckeditor/ckeditor/"
 CKEDITOR_UPLOAD_PATH = "uploads/"
 CKEDITOR_FILENAME_GENERATOR = "utils.get_filename"
 
-MATHJAX_LOCAL_PATH = "/env/lib/python3.8/site-packages/django_mathjax"
+# MATHJAX_LOCAL_PATH = "/env/lib/python3.8/site-packages/django_mathjax"
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
