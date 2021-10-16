@@ -426,7 +426,7 @@ CKEDITOR_BASEPATH = "/static/ckeditor/ckeditor/"
 CKEDITOR_UPLOAD_PATH = "uploads/"
 CKEDITOR_FILENAME_GENERATOR = "utils.get_filename"
 
-MATHJAX_LOCAL_PATH = "js/libs/mathjax/"
+MATHJAX_LOCAL_PATH = "/env/lib/python3.8/site-packages/django_mathjax"
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
