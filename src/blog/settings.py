@@ -408,7 +408,6 @@ CKEDITOR_CONFIGS = {
                 "autoembed",
                 "embedsemantic",
                 "autogrow",
-                "image2",
                 # 'devtools',
                 "widget",
                 "codesnippet",
@@ -426,6 +425,8 @@ CKEDITOR_CONFIGS = {
 CKEDITOR_BASEPATH = "/static/ckeditor/ckeditor/"
 CKEDITOR_UPLOAD_PATH = "uploads/"
 CKEDITOR_FILENAME_GENERATOR = "utils.get_filename"
+
+MATHJAX_LOCAL_PATH = "js/libs/mathjax/"
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
