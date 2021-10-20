@@ -10,6 +10,7 @@ from django.urls import reverse
 from ckeditor.fields import RichTextField
 from django.utils.text import slugify
 from django_ckeditor_5.fields import CKEditor5Field
+from datetime import datetime, date
 
 User = get_user_model()
 
@@ -31,7 +32,7 @@ class Category(models.Model):
 
 class Comment(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE)
-    timestamp = models.DateTimeField(auto_now_add=True)
+    timestamp = models.DateField(auto_now_add=True)
     content = models.TextField()
     post = models.ForeignKey("Post", related_name="comments", on_delete=models.CASCADE)
 
@@ -42,7 +43,7 @@ class Comment(models.Model):
 class Post(models.Model):
     title = models.CharField(max_length=100)
     overview = models.TextField(max_length=2000)
-    timestamp = models.DateTimeField(auto_now_add=True)
+    timestamp = models.DateField(auto_now_add=True)
     # content = CKEditor5Field("Content", config_name="extends", null=True, blank=True)
     content = RichTextField(blank=True, null=True)
     slug = models.SlugField(max_length=250, null=True, blank=True)
