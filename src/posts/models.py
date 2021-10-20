@@ -8,8 +8,8 @@ from django.db import models
 from django.contrib.auth import get_user_model
 from django.urls import reverse
 from ckeditor.fields import RichTextField
+from ckeditor_uploader.fields import RichTextUploadingField
 from django.utils.text import slugify
-from django_ckeditor_5.fields import CKEditor5Field
 
 # from datetime import datetime,date
 
@@ -49,7 +49,7 @@ class Post(models.Model):
     # content = CKEditor5Field("Content", config_name="extends", null=True, blank=True)
     # content = RichTextField(blank=True, null=True)
 
-    content = RichTextField(blank=True, null=True)
+    content = RichTextUploadingField(blank=True, null=True)
     slug = models.SlugField(max_length=250, null=True, blank=True)
     # slug field !!!maybe change
 
